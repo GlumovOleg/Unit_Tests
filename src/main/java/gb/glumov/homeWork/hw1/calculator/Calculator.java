@@ -1,4 +1,4 @@
-package gb.glumov.homeWork.hw1;
+package gb.glumov.homeWork.hw1.calculator;
 
 public class Calculator {
 
@@ -31,6 +31,9 @@ public class Calculator {
     // HW1.1: Придумайте и опишите (можно в псевдокоде) функцию извлечения корня и
     // необходимые проверки для него используя граничные случаи
     public static double squareRootExtraction(double num) {
+
+        double sqrtNum = Math.sqrt(num);
+
         //  0
         //  Отрицательные числа
         //  Дробные значения корней
@@ -46,7 +49,12 @@ public class Calculator {
     public static double calculatingDiscount(double purchaseAmount, int discountAmount) {
         // purchaseAmount - сумма покупки
         // discountAmount - размер скидки
-        return 0; // Метод должен возвращать сумму покупки со скидкой
+        double finalPrice = purchaseAmount * discountAmount;
+
+        if ((purchaseAmount < 0) && (discountAmount > 100)) {
+            throw new ArithmeticException("Переданы не верные аргументы");
+        }
+        return finalPrice; // Метод должен возвращать сумму покупки со скидкой
     }
 
 

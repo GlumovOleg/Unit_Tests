@@ -1,11 +1,13 @@
 package homeWorks.hw1;
 
-import gb.glumov.homeWork.hw1.calculator.Calculator;
+import gb.glumov.seminars.seminar1.task1.calk.Calculator;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
+
+    private Calculator calculator;
 
     @Test
     void calculation() {
@@ -17,9 +19,9 @@ class CalculatorTest {
 
     @Test
     void calculatingDiscount() {
-        double finalPrice = 10 * 0.015;
+
         assertThrows(ArithmeticException.class, () -> {
-            finalPrice = 1 / 0;  // проверка, что происходит исключение ArithmeticException
+            int finalPrice = 0; // проверка, что происходит исключение ArithmeticException
         });
     }
 }

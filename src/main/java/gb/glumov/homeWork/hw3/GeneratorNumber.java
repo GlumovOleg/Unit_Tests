@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class GeneratorNumber {
 
-    public boolean evenOddNumber(int n) {
+    public static boolean evenOddNumber(int n) {
         if (n % 2 == 0) {
             return true;
         } else {
@@ -17,7 +17,7 @@ public class GeneratorNumber {
         Random random = new Random();
         int randomNumber = random.nextInt(100) + 1;
         System.out.println("Рандомное число : " + randomNumber);
-        if (randomNumber > 25 && randomNumber < 100){
+        if (randomNumber >= 25 && randomNumber <= 100){
             System.out.println("Число попадает в заданный интервал от 25 до 100");
         }
         else {
